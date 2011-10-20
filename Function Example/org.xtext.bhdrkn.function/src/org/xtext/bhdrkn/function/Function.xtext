@@ -1,0 +1,24 @@
+
+grammar org.xtext.bhdrkn.function.Function with org.eclipse.xtext.common.Terminals
+
+generate function "http://www.xtext.org/bhdrkn/function/Function"
+
+FUNCFile:
+functions = Functions
+calls = Calls;
+
+Functions:
+'[FUNCTIONS]'
+functions+=Function*
+'[/FUNCTIONS]' ;
+
+Function:
+'function' name=ID;
+
+Calls:
+'[CALLS]'
+calls+=Call*
+'[/CALLS]' ;
+
+Call:
+'call' name=[Function];

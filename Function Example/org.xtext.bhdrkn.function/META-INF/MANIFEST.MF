@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.bhdrkn.function
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: org.xtext.bhdrkn.function; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ com.ibm.icu;resolution:=optional,
+ org.eclipse.xtext.xtend;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.xtext.bhdrkn.function,
+ org.xtext.bhdrkn.function.services,
+ org.xtext.bhdrkn.function.function,
+ org.xtext.bhdrkn.function.function.impl,
+ org.xtext.bhdrkn.function.function.util,
+ org.xtext.bhdrkn.function.parseTreeConstruction,
+ org.xtext.bhdrkn.function.parser.antlr,
+ org.xtext.bhdrkn.function.parser.antlr.internal,
+ org.xtext.bhdrkn.function.validation
