@@ -1,0 +1,13 @@
+import org::xtext::bhdrkn::fouroperation;
+
+String calculate(Addition this) :
+	"Result is " + (this.left.toInteger() + this.right.toInteger()).toString(); 
+
+String calculate(Minus this) :
+	"Result is " + (this.left.toInteger() - this.right.toInteger()).toString();
+	
+String calculate(Multi this) :
+	"Result is " + (this.left.toInteger() * this.right.toInteger()).toString();
+	
+String calculate(Div this) :
+	"Result is " + (this.left.toInteger() / this.right.toInteger()).toString();

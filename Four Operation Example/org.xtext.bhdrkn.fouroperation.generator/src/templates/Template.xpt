@@ -1,0 +1,25 @@
+«IMPORT org::xtext::bhdrkn::fouroperation»
+
+«EXTENSION templates::Extensions»
+
+«DEFINE main FOR Operation»
+	«EXPAND statement FOREACH this.statements»
+«ENDDEFINE»
+
+«DEFINE statement FOR Statement»
+	«EXPAND expression FOR this.expression»
+«ENDDEFINE»
+
+«DEFINE expression FOR Expression»
+	«FILE "bhdrkn" + this.eClass().name + ".txt"»
+	«IF this.eClass().name == "Addition"»
+		«((Addition)this).calculate()»
+	«ELSEIF this.eClass().name == "Minus"»
+		«((Minus)this).calculate()»
+	«ELSEIF this.eClass().name == "Multi"»
+		«((Multi)this).calculate()»
+	«ELSEIF this.eClass().name == "Div"»
+		«((Div)this).calculate()»
+	«ENDIF»
+	«ENDFILE»
+«ENDDEFINE»
