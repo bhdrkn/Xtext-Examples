@@ -1,6 +1,13 @@
-/*
- * This is an example model
- */
-Hello world!
-Hello Xtext!
-Hello Eclipse!
+[DEFINITIONS]
+Type1 Name
+Type2 name2
+Type1 name3
+[/DEFINITIONS]
+[FUNCTIONS]
+function myFirstFunction(Type1 arg0)
+[/FUNCTIONS]
+[CALLS]
+call myFirstFunction(Name)
+call myFirstFunction(name3)
+call myFirstFunction(name2)
+[/CALLS] 

@@ -4,8 +4,20 @@ grammar org.xtext.bhdrkn.function.Function with org.eclipse.xtext.common.Termina
 generate function "http://www.xtext.org/bhdrkn/function/Function"
 
 FUNCFile:
+defines = Defines
 functions = Functions
 calls = Calls;
+
+Defines:
+'[DEFINITIONS]'
+definitions+=Define*
+'[/DEFINITIONS]';
+
+Define:
+    keyword=Keyword name=ID;
+    
+Keyword:
+    "Type1" | "Type2"; 
 
 Functions:
 '[FUNCTIONS]'
@@ -13,7 +25,10 @@ functions+=Function*
 '[/FUNCTIONS]' ;
 
 Function:
-'function' name=ID;
+'function' name=ID '(' (args+=Argument)* ')';
+
+Argument:
+    keyword=Keyword name=ID;
 
 Calls:
 '[CALLS]'
@@ -21,4 +36,5 @@ calls+=Call*
 '[/CALLS]' ;
 
 Call:
-'call' name=[Function];
+'call' name=[Function] '('args=[Define]')';
+

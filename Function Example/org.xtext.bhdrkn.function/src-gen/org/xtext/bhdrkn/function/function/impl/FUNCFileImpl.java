@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.bhdrkn.function.function.Calls;
+import org.xtext.bhdrkn.function.function.Defines;
 import org.xtext.bhdrkn.function.function.FUNCFile;
 import org.xtext.bhdrkn.function.function.FunctionPackage;
 import org.xtext.bhdrkn.function.function.Functions;
@@ -27,6 +28,7 @@ import org.xtext.bhdrkn.function.function.Functions;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.bhdrkn.function.function.impl.FUNCFileImpl#getDefines <em>Defines</em>}</li>
  *   <li>{@link org.xtext.bhdrkn.function.function.impl.FUNCFileImpl#getFunctions <em>Functions</em>}</li>
  *   <li>{@link org.xtext.bhdrkn.function.function.impl.FUNCFileImpl#getCalls <em>Calls</em>}</li>
  * </ul>
@@ -36,6 +38,16 @@ import org.xtext.bhdrkn.function.function.Functions;
  */
 public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFile
 {
+  /**
+   * The cached value of the '{@link #getDefines() <em>Defines</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDefines()
+   * @generated
+   * @ordered
+   */
+  protected Defines defines;
+
   /**
    * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -75,6 +87,54 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   protected EClass eStaticClass()
   {
     return FunctionPackage.Literals.FUNC_FÝLE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Defines getDefines()
+  {
+    return defines;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDefines(Defines newDefines, NotificationChain msgs)
+  {
+    Defines oldDefines = defines;
+    defines = newDefines;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FunctionPackage.FUNC_FÝLE__DEFÝNES, oldDefines, newDefines);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDefines(Defines newDefines)
+  {
+    if (newDefines != defines)
+    {
+      NotificationChain msgs = null;
+      if (defines != null)
+        msgs = ((InternalEObject)defines).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FunctionPackage.FUNC_FÝLE__DEFÝNES, null, msgs);
+      if (newDefines != null)
+        msgs = ((InternalEObject)newDefines).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FunctionPackage.FUNC_FÝLE__DEFÝNES, null, msgs);
+      msgs = basicSetDefines(newDefines, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FunctionPackage.FUNC_FÝLE__DEFÝNES, newDefines, newDefines));
   }
 
   /**
@@ -183,6 +243,8 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   {
     switch (featureID)
     {
+      case FunctionPackage.FUNC_FÝLE__DEFÝNES:
+        return basicSetDefines(null, msgs);
       case FunctionPackage.FUNC_FÝLE__FUNCTÝONS:
         return basicSetFunctions(null, msgs);
       case FunctionPackage.FUNC_FÝLE__CALLS:
@@ -201,6 +263,8 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   {
     switch (featureID)
     {
+      case FunctionPackage.FUNC_FÝLE__DEFÝNES:
+        return getDefines();
       case FunctionPackage.FUNC_FÝLE__FUNCTÝONS:
         return getFunctions();
       case FunctionPackage.FUNC_FÝLE__CALLS:
@@ -219,6 +283,9 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   {
     switch (featureID)
     {
+      case FunctionPackage.FUNC_FÝLE__DEFÝNES:
+        setDefines((Defines)newValue);
+        return;
       case FunctionPackage.FUNC_FÝLE__FUNCTÝONS:
         setFunctions((Functions)newValue);
         return;
@@ -239,6 +306,9 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   {
     switch (featureID)
     {
+      case FunctionPackage.FUNC_FÝLE__DEFÝNES:
+        setDefines((Defines)null);
+        return;
       case FunctionPackage.FUNC_FÝLE__FUNCTÝONS:
         setFunctions((Functions)null);
         return;
@@ -259,6 +329,8 @@ public class FUNCFileImpl extends MinimalEObjectImpl.Container implements FUNCFi
   {
     switch (featureID)
     {
+      case FunctionPackage.FUNC_FÝLE__DEFÝNES:
+        return defines != null;
       case FunctionPackage.FUNC_FÝLE__FUNCTÝONS:
         return functions != null;
       case FunctionPackage.FUNC_FÝLE__CALLS:

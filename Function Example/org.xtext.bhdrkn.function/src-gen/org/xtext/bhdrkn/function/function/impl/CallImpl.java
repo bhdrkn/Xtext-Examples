@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.bhdrkn.function.function.Call;
+import org.xtext.bhdrkn.function.function.Define;
 import org.xtext.bhdrkn.function.function.Function;
 import org.xtext.bhdrkn.function.function.FunctionPackage;
 
@@ -26,6 +27,7 @@ import org.xtext.bhdrkn.function.function.FunctionPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.bhdrkn.function.function.impl.CallImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.bhdrkn.function.function.impl.CallImpl#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,6 +44,16 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
    * @ordered
    */
   protected Function name;
+
+  /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected Define args;
 
   /**
    * <!-- begin-user-doc -->
@@ -112,6 +124,49 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
    * <!-- end-user-doc -->
    * @generated
    */
+  public Define getArgs()
+  {
+    if (args != null && args.eIsProxy())
+    {
+      InternalEObject oldArgs = (InternalEObject)args;
+      args = (Define)eResolveProxy(oldArgs);
+      if (args != oldArgs)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionPackage.CALL__ARGS, oldArgs, args));
+      }
+    }
+    return args;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Define basicGetArgs()
+  {
+    return args;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setArgs(Define newArgs)
+  {
+    Define oldArgs = args;
+    args = newArgs;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FunctionPackage.CALL__ARGS, oldArgs, args));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -120,6 +175,9 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
       case FunctionPackage.CALL__NAME:
         if (resolve) return getName();
         return basicGetName();
+      case FunctionPackage.CALL__ARGS:
+        if (resolve) return getArgs();
+        return basicGetArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -136,6 +194,9 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
     {
       case FunctionPackage.CALL__NAME:
         setName((Function)newValue);
+        return;
+      case FunctionPackage.CALL__ARGS:
+        setArgs((Define)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -154,6 +215,9 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
       case FunctionPackage.CALL__NAME:
         setName((Function)null);
         return;
+      case FunctionPackage.CALL__ARGS:
+        setArgs((Define)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -170,6 +234,8 @@ public class CallImpl extends MinimalEObjectImpl.Container implements Call
     {
       case FunctionPackage.CALL__NAME:
         return name != null;
+      case FunctionPackage.CALL__ARGS:
+        return args != null;
     }
     return super.eIsSet(featureID);
   }

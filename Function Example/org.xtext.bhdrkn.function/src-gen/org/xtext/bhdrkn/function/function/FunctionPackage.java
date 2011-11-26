@@ -71,13 +71,22 @@ public interface FunctionPackage extends EPackage
   int FUNC_FÝLE = 0;
 
   /**
+   * The feature id for the '<em><b>Defines</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNC_FÝLE__DEFÝNES = 0;
+
+  /**
    * The feature id for the '<em><b>Functions</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNC_FÝLE__FUNCTÝONS = 0;
+  int FUNC_FÝLE__FUNCTÝONS = 1;
 
   /**
    * The feature id for the '<em><b>Calls</b></em>' containment reference.
@@ -86,7 +95,7 @@ public interface FunctionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNC_FÝLE__CALLS = 1;
+  int FUNC_FÝLE__CALLS = 2;
 
   /**
    * The number of structural features of the '<em>FUNC File</em>' class.
@@ -95,7 +104,72 @@ public interface FunctionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNC_FÝLE_FEATURE_COUNT = 2;
+  int FUNC_FÝLE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.bhdrkn.function.function.impl.DefinesImpl <em>Defines</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.bhdrkn.function.function.impl.DefinesImpl
+   * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getDefines()
+   * @generated
+   */
+  int DEFÝNES = 1;
+
+  /**
+   * The feature id for the '<em><b>Definitions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFÝNES__DEFÝNÝTÝONS = 0;
+
+  /**
+   * The number of structural features of the '<em>Defines</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFÝNES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.bhdrkn.function.function.impl.DefineImpl <em>Define</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.bhdrkn.function.function.impl.DefineImpl
+   * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getDefine()
+   * @generated
+   */
+  int DEFÝNE = 2;
+
+  /**
+   * The feature id for the '<em><b>Keyword</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFÝNE__KEYWORD = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFÝNE__NAME = 1;
+
+  /**
+   * The number of structural features of the '<em>Define</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFÝNE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.bhdrkn.function.function.impl.FunctionsImpl <em>Functions</em>}' class.
@@ -105,7 +179,7 @@ public interface FunctionPackage extends EPackage
    * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getFunctions()
    * @generated
    */
-  int FUNCTÝONS = 1;
+  int FUNCTÝONS = 3;
 
   /**
    * The feature id for the '<em><b>Functions</b></em>' containment reference list.
@@ -133,7 +207,7 @@ public interface FunctionPackage extends EPackage
    * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTÝON = 2;
+  int FUNCTÝON = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -145,13 +219,59 @@ public interface FunctionPackage extends EPackage
   int FUNCTÝON__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTÝON__ARGS = 1;
+
+  /**
    * The number of structural features of the '<em>Function</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTÝON_FEATURE_COUNT = 1;
+  int FUNCTÝON_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.bhdrkn.function.function.impl.ArgumentImpl <em>Argument</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.bhdrkn.function.function.impl.ArgumentImpl
+   * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getArgument()
+   * @generated
+   */
+  int ARGUMENT = 5;
+
+  /**
+   * The feature id for the '<em><b>Keyword</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__KEYWORD = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT__NAME = 1;
+
+  /**
+   * The number of structural features of the '<em>Argument</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARGUMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.bhdrkn.function.function.impl.CallsImpl <em>Calls</em>}' class.
@@ -161,7 +281,7 @@ public interface FunctionPackage extends EPackage
    * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getCalls()
    * @generated
    */
-  int CALLS = 3;
+  int CALLS = 6;
 
   /**
    * The feature id for the '<em><b>Calls</b></em>' containment reference list.
@@ -189,7 +309,7 @@ public interface FunctionPackage extends EPackage
    * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getCall()
    * @generated
    */
-  int CALL = 4;
+  int CALL = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' reference.
@@ -201,13 +321,22 @@ public interface FunctionPackage extends EPackage
   int CALL__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALL__ARGS = 1;
+
+  /**
    * The number of structural features of the '<em>Call</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALL_FEATURE_COUNT = 1;
+  int CALL_FEATURE_COUNT = 2;
 
 
   /**
@@ -219,6 +348,17 @@ public interface FunctionPackage extends EPackage
    * @generated
    */
   EClass getFUNCFile();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.bhdrkn.function.function.FUNCFile#getDefines <em>Defines</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Defines</em>'.
+   * @see org.xtext.bhdrkn.function.function.FUNCFile#getDefines()
+   * @see #getFUNCFile()
+   * @generated
+   */
+  EReference getFUNCFile_Defines();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.bhdrkn.function.function.FUNCFile#getFunctions <em>Functions</em>}'.
@@ -241,6 +381,59 @@ public interface FunctionPackage extends EPackage
    * @generated
    */
   EReference getFUNCFile_Calls();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.bhdrkn.function.function.Defines <em>Defines</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Defines</em>'.
+   * @see org.xtext.bhdrkn.function.function.Defines
+   * @generated
+   */
+  EClass getDefines();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.bhdrkn.function.function.Defines#getDefinitions <em>Definitions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Definitions</em>'.
+   * @see org.xtext.bhdrkn.function.function.Defines#getDefinitions()
+   * @see #getDefines()
+   * @generated
+   */
+  EReference getDefines_Definitions();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.bhdrkn.function.function.Define <em>Define</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Define</em>'.
+   * @see org.xtext.bhdrkn.function.function.Define
+   * @generated
+   */
+  EClass getDefine();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.bhdrkn.function.function.Define#getKeyword <em>Keyword</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Keyword</em>'.
+   * @see org.xtext.bhdrkn.function.function.Define#getKeyword()
+   * @see #getDefine()
+   * @generated
+   */
+  EAttribute getDefine_Keyword();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.bhdrkn.function.function.Define#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.bhdrkn.function.function.Define#getName()
+   * @see #getDefine()
+   * @generated
+   */
+  EAttribute getDefine_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.bhdrkn.function.function.Functions <em>Functions</em>}'.
@@ -285,6 +478,49 @@ public interface FunctionPackage extends EPackage
   EAttribute getFunction_Name();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.bhdrkn.function.function.Function#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Args</em>'.
+   * @see org.xtext.bhdrkn.function.function.Function#getArgs()
+   * @see #getFunction()
+   * @generated
+   */
+  EReference getFunction_Args();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.bhdrkn.function.function.Argument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Argument</em>'.
+   * @see org.xtext.bhdrkn.function.function.Argument
+   * @generated
+   */
+  EClass getArgument();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.bhdrkn.function.function.Argument#getKeyword <em>Keyword</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Keyword</em>'.
+   * @see org.xtext.bhdrkn.function.function.Argument#getKeyword()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Keyword();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.bhdrkn.function.function.Argument#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.bhdrkn.function.function.Argument#getName()
+   * @see #getArgument()
+   * @generated
+   */
+  EAttribute getArgument_Name();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.bhdrkn.function.function.Calls <em>Calls</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -327,6 +563,17 @@ public interface FunctionPackage extends EPackage
   EReference getCall_Name();
 
   /**
+   * Returns the meta object for the reference '{@link org.xtext.bhdrkn.function.function.Call#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Args</em>'.
+   * @see org.xtext.bhdrkn.function.function.Call#getArgs()
+   * @see #getCall()
+   * @generated
+   */
+  EReference getCall_Args();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -360,6 +607,14 @@ public interface FunctionPackage extends EPackage
     EClass FUNC_FÝLE = eINSTANCE.getFUNCFile();
 
     /**
+     * The meta object literal for the '<em><b>Defines</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNC_FÝLE__DEFÝNES = eINSTANCE.getFUNCFile_Defines();
+
+    /**
      * The meta object literal for the '<em><b>Functions</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -374,6 +629,50 @@ public interface FunctionPackage extends EPackage
      * @generated
      */
     EReference FUNC_FÝLE__CALLS = eINSTANCE.getFUNCFile_Calls();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.bhdrkn.function.function.impl.DefinesImpl <em>Defines</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.bhdrkn.function.function.impl.DefinesImpl
+     * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getDefines()
+     * @generated
+     */
+    EClass DEFÝNES = eINSTANCE.getDefines();
+
+    /**
+     * The meta object literal for the '<em><b>Definitions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEFÝNES__DEFÝNÝTÝONS = eINSTANCE.getDefines_Definitions();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.bhdrkn.function.function.impl.DefineImpl <em>Define</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.bhdrkn.function.function.impl.DefineImpl
+     * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getDefine()
+     * @generated
+     */
+    EClass DEFÝNE = eINSTANCE.getDefine();
+
+    /**
+     * The meta object literal for the '<em><b>Keyword</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEFÝNE__KEYWORD = eINSTANCE.getDefine_Keyword();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEFÝNE__NAME = eINSTANCE.getDefine_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.bhdrkn.function.function.impl.FunctionsImpl <em>Functions</em>}' class.
@@ -412,6 +711,40 @@ public interface FunctionPackage extends EPackage
     EAttribute FUNCTÝON__NAME = eINSTANCE.getFunction_Name();
 
     /**
+     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTÝON__ARGS = eINSTANCE.getFunction_Args();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.bhdrkn.function.function.impl.ArgumentImpl <em>Argument</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.bhdrkn.function.function.impl.ArgumentImpl
+     * @see org.xtext.bhdrkn.function.function.impl.FunctionPackageImpl#getArgument()
+     * @generated
+     */
+    EClass ARGUMENT = eINSTANCE.getArgument();
+
+    /**
+     * The meta object literal for the '<em><b>Keyword</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__KEYWORD = eINSTANCE.getArgument_Keyword();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
+
+    /**
      * The meta object literal for the '{@link org.xtext.bhdrkn.function.function.impl.CallsImpl <em>Calls</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -446,6 +779,14 @@ public interface FunctionPackage extends EPackage
      * @generated
      */
     EReference CALL__NAME = eINSTANCE.getCall_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Args</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CALL__ARGS = eINSTANCE.getCall_Args();
 
   }
 

@@ -2,13 +2,8 @@
 
 «EXTENSION templates::Extensions»
 
-«DEFINE main FOR Greeting-»
-«FILE name+".txt"-»
-This is an example of a generated file.
+«DEFINE main FOR FUNCFile»
 
-The input element was "Hello «name»!"
+«ENDDEFINE»
 
-All greetings in the same file:
-«FOREACH ((Model)eContainer()).sortedGreetings() AS g SEPARATOR ', '»«g.name»«ENDFOREACH»
-«ENDFILE-»
 «ENDDEFINE»

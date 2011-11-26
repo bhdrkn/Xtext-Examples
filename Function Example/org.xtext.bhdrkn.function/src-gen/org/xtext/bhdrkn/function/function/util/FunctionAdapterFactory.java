@@ -84,6 +84,16 @@ public class FunctionAdapterFactory extends AdapterFactoryImpl
         return createFUNCFileAdapter();
       }
       @Override
+      public Adapter caseDefines(Defines object)
+      {
+        return createDefinesAdapter();
+      }
+      @Override
+      public Adapter caseDefine(Define object)
+      {
+        return createDefineAdapter();
+      }
+      @Override
       public Adapter caseFunctions(Functions object)
       {
         return createFunctionsAdapter();
@@ -92,6 +102,11 @@ public class FunctionAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
+      }
+      @Override
+      public Adapter caseArgument(Argument object)
+      {
+        return createArgumentAdapter();
       }
       @Override
       public Adapter caseCalls(Calls object)
@@ -141,6 +156,36 @@ public class FunctionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.bhdrkn.function.function.Defines <em>Defines</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.bhdrkn.function.function.Defines
+   * @generated
+   */
+  public Adapter createDefinesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.bhdrkn.function.function.Define <em>Define</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.bhdrkn.function.function.Define
+   * @generated
+   */
+  public Adapter createDefineAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.bhdrkn.function.function.Functions <em>Functions</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -166,6 +211,21 @@ public class FunctionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.bhdrkn.function.function.Argument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.bhdrkn.function.function.Argument
+   * @generated
+   */
+  public Adapter createArgumentAdapter()
   {
     return null;
   }

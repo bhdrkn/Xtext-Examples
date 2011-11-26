@@ -37,17 +37,29 @@ public class FunctionParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getKeywordAccess().getAlternatives(), "rule__Keyword__Alternatives");
 					put(grammarAccess.getFUNCFileAccess().getGroup(), "rule__FUNCFile__Group__0");
+					put(grammarAccess.getDefinesAccess().getGroup(), "rule__Defines__Group__0");
+					put(grammarAccess.getDefineAccess().getGroup(), "rule__Define__Group__0");
 					put(grammarAccess.getFunctionsAccess().getGroup(), "rule__Functions__Group__0");
 					put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
+					put(grammarAccess.getArgumentAccess().getGroup(), "rule__Argument__Group__0");
 					put(grammarAccess.getCallsAccess().getGroup(), "rule__Calls__Group__0");
 					put(grammarAccess.getCallAccess().getGroup(), "rule__Call__Group__0");
-					put(grammarAccess.getFUNCFileAccess().getFunctionsAssignment_0(), "rule__FUNCFile__FunctionsAssignment_0");
-					put(grammarAccess.getFUNCFileAccess().getCallsAssignment_1(), "rule__FUNCFile__CallsAssignment_1");
+					put(grammarAccess.getFUNCFileAccess().getDefinesAssignment_0(), "rule__FUNCFile__DefinesAssignment_0");
+					put(grammarAccess.getFUNCFileAccess().getFunctionsAssignment_1(), "rule__FUNCFile__FunctionsAssignment_1");
+					put(grammarAccess.getFUNCFileAccess().getCallsAssignment_2(), "rule__FUNCFile__CallsAssignment_2");
+					put(grammarAccess.getDefinesAccess().getDefinitionsAssignment_1(), "rule__Defines__DefinitionsAssignment_1");
+					put(grammarAccess.getDefineAccess().getKeywordAssignment_0(), "rule__Define__KeywordAssignment_0");
+					put(grammarAccess.getDefineAccess().getNameAssignment_1(), "rule__Define__NameAssignment_1");
 					put(grammarAccess.getFunctionsAccess().getFunctionsAssignment_1(), "rule__Functions__FunctionsAssignment_1");
 					put(grammarAccess.getFunctionAccess().getNameAssignment_1(), "rule__Function__NameAssignment_1");
+					put(grammarAccess.getFunctionAccess().getArgsAssignment_3(), "rule__Function__ArgsAssignment_3");
+					put(grammarAccess.getArgumentAccess().getKeywordAssignment_0(), "rule__Argument__KeywordAssignment_0");
+					put(grammarAccess.getArgumentAccess().getNameAssignment_1(), "rule__Argument__NameAssignment_1");
 					put(grammarAccess.getCallsAccess().getCallsAssignment_1(), "rule__Calls__CallsAssignment_1");
 					put(grammarAccess.getCallAccess().getNameAssignment_1(), "rule__Call__NameAssignment_1");
+					put(grammarAccess.getCallAccess().getArgsAssignment_3(), "rule__Call__ArgsAssignment_3");
 				}
 			};
 		}

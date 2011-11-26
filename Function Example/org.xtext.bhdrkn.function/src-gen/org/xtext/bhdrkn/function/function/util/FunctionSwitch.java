@@ -103,6 +103,20 @@ public class FunctionSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FunctionPackage.DEFÝNES:
+      {
+        Defines defines = (Defines)theEObject;
+        T result = caseDefines(defines);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FunctionPackage.DEFÝNE:
+      {
+        Define define = (Define)theEObject;
+        T result = caseDefine(define);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FunctionPackage.FUNCTÝONS:
       {
         Functions functions = (Functions)theEObject;
@@ -114,6 +128,13 @@ public class FunctionSwitch<T>
       {
         Function function = (Function)theEObject;
         T result = caseFunction(function);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FunctionPackage.ARGUMENT:
+      {
+        Argument argument = (Argument)theEObject;
+        T result = caseArgument(argument);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -152,6 +173,38 @@ public class FunctionSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Defines</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Defines</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefines(Defines object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Define</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Define</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefine(Define object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Functions</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -179,6 +232,22 @@ public class FunctionSwitch<T>
    * @generated
    */
   public T caseFunction(Function object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArgument(Argument object)
   {
     return null;
   }

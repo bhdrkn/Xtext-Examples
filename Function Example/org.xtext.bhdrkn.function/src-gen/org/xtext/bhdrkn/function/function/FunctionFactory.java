@@ -36,6 +36,24 @@ public interface FunctionFactory extends EFactory
   FUNCFile createFUNCFile();
 
   /**
+   * Returns a new object of class '<em>Defines</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Defines</em>'.
+   * @generated
+   */
+  Defines createDefines();
+
+  /**
+   * Returns a new object of class '<em>Define</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Define</em>'.
+   * @generated
+   */
+  Define createDefine();
+
+  /**
    * Returns a new object of class '<em>Functions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -52,6 +70,15 @@ public interface FunctionFactory extends EFactory
    * @generated
    */
   Function createFunction();
+
+  /**
+   * Returns a new object of class '<em>Argument</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Argument</em>'.
+   * @generated
+   */
+  Argument createArgument();
 
   /**
    * Returns a new object of class '<em>Calls</em>'.

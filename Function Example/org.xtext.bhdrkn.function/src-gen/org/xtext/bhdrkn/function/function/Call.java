@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.bhdrkn.function.function.Call#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.bhdrkn.function.function.Call#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,5 +52,31 @@ public interface Call extends EObject
    * @generated
    */
   void setName(Function value);
+
+  /**
+   * Returns the value of the '<em><b>Args</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Args</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Args</em>' reference.
+   * @see #setArgs(Define)
+   * @see org.xtext.bhdrkn.function.function.FunctionPackage#getCall_Args()
+   * @model
+   * @generated
+   */
+  Define getArgs();
+
+  /**
+   * Sets the value of the '{@link org.xtext.bhdrkn.function.function.Call#getArgs <em>Args</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Args</em>' reference.
+   * @see #getArgs()
+   * @generated
+   */
+  void setArgs(Define value);
 
 } // Call

@@ -69,8 +69,11 @@ public class FunctionFactoryImpl extends EFactoryImpl implements FunctionFactory
     switch (eClass.getClassifierID())
     {
       case FunctionPackage.FUNC_FÝLE: return createFUNCFile();
+      case FunctionPackage.DEFÝNES: return createDefines();
+      case FunctionPackage.DEFÝNE: return createDefine();
       case FunctionPackage.FUNCTÝONS: return createFunctions();
       case FunctionPackage.FUNCTÝON: return createFunction();
+      case FunctionPackage.ARGUMENT: return createArgument();
       case FunctionPackage.CALLS: return createCalls();
       case FunctionPackage.CALL: return createCall();
       default:
@@ -94,6 +97,28 @@ public class FunctionFactoryImpl extends EFactoryImpl implements FunctionFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Defines createDefines()
+  {
+    DefinesImpl defines = new DefinesImpl();
+    return defines;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Define createDefine()
+  {
+    DefineImpl define = new DefineImpl();
+    return define;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Functions createFunctions()
   {
     FunctionsImpl functions = new FunctionsImpl();
@@ -109,6 +134,17 @@ public class FunctionFactoryImpl extends EFactoryImpl implements FunctionFactory
   {
     FunctionImpl function = new FunctionImpl();
     return function;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Argument createArgument()
+  {
+    ArgumentImpl argument = new ArgumentImpl();
+    return argument;
   }
 
   /**

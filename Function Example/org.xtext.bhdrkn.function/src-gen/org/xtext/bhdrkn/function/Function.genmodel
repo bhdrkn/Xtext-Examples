@@ -10,20 +10,34 @@
   <genPackages prefix="Function" basePackage="org.xtext.bhdrkn.function" disposableProviderFactory="true"
       ecorePackage="Function.ecore#/">
     <genClasses ecoreClass="Function.ecore#//FUNCFile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//FUNCFile/defines"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//FUNCFile/functions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//FUNCFile/calls"/>
+    </genClasses>
+    <genClasses ecoreClass="Function.ecore#//Defines">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//Defines/definitions"/>
+    </genClasses>
+    <genClasses ecoreClass="Function.ecore#//Define">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Function.ecore#//Define/keyword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Function.ecore#//Define/name"/>
     </genClasses>
     <genClasses ecoreClass="Function.ecore#//Functions">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//Functions/functions"/>
     </genClasses>
     <genClasses ecoreClass="Function.ecore#//Function">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Function.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//Function/args"/>
+    </genClasses>
+    <genClasses ecoreClass="Function.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Function.ecore#//Argument/keyword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Function.ecore#//Argument/name"/>
     </genClasses>
     <genClasses ecoreClass="Function.ecore#//Calls">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Function.ecore#//Calls/calls"/>
     </genClasses>
     <genClasses ecoreClass="Function.ecore#//Call">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Function.ecore#//Call/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Function.ecore#//Call/args"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
